@@ -1,13 +1,19 @@
-n = int(input('Digite um umero interio:    '))
-conv = str(input('Se você deseja coverter digite uma opção binario(1) / octal(2) / hexadecimal(3)'))
+numero = int(input('Digite um numero:  '))
 
-1
-2
-3
+print('''Escolha uma das bases para coversão:
+[ 1 ] converte para Binario
+[ 2 ] converte para Octal
+[ 3 ] converte para Hexadecimal''')
 
-if conv == 1:
-    print('O numero {n} convertido em binario ficaria {}')
-elif conv == 2:
-    print('O numero {n} comvertido em octal ficaria {}')
+opção = int(input('Sua opção: '))
+
+if opção == 1:
+    print(f'{numero} convertido para binario é {bin(numero)[2:]}')
+elif opção == 2:
+    print(f'{numero} convertido para octal é {oct(numero)[2:]}')
+elif opção == 3:
+    print(f'{numero} convertido em hexadecimal é {hex(numero)[2:]}')
 else:
-    print('O numero {n} convertido em hexadecimal ficaria {}')
+    print('Digite uma opção valida!!')
+
+
