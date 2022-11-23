@@ -1,11 +1,10 @@
-totalmaior = 0
-totalmenor = 0
-for pessoa in range(1,8):
-    idade = int(input(f'Em que ano a {pessoa}ª você nasceu?  '))
-    ano = 2022 - idade
-    if ano >= 21:
-        totalmaior = totalmaior + 1
-    else:
-        totalmenor = totalmenor + 1
-print(f'no total tivemos {totalmaior} pessoas maior de idade')
-print(f'e tivemos {totalmenor} menor de idade')
+frase = str(input('Digite uma frase:  ')).strip().upper()
+palavras = frase.split()
+junto = ''.join(palavras)
+inverso = ''
+
+for letra in range(len(junto) - 1, -1, -1):
+    inverso = inverso + junto[letra]
+print(f'o inverso de {frase} é {inverso}')
+if inverso == junto:
+    print('Temos um palindromo!')
